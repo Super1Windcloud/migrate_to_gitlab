@@ -1,0 +1,29 @@
+{
+  "name": "sync_repo_to_gitlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsdown src/index.ts",
+    "start": "tsdown src/index.ts --on-success \"node dist/index.mjs\"",
+    "sync": "tsdown src/index.ts --on-success \"node dist/index.mjs\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.6.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.6.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "dotenv": "^18.0.3",
+    "tsdown": "^0.23.0",
+    "typescript": "^7.0.2"
+  }
+}
